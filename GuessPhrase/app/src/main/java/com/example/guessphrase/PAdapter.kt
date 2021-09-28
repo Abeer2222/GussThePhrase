@@ -27,13 +27,20 @@ class PAdapter(val context: Context, val message: ArrayList<String>) :
 
         holder.itemView.apply {
             itemText.text = message
-            if (message.startsWith("Found")) {
-                itemText.setTextColor(Color.BLUE)
-            } else if (message.startsWith("No") || message.startsWith("Wrong")) {
-                itemText.setTextColor(Color.RED)
-            } else {
-                itemText.setTextColor(Color.BLACK)
+             when {
+                message.startsWith("Found") -> {
+                    itemText.setTextColor(Color.BLUE)
+                }
+                message.startsWith("No") || message.startsWith("Wrong")->{
+                    itemText.setTextColor(Color.RED)
+                }
+                else->{
+                    itemText.setTextColor(Color.BLACK)
+
+                }
+
             }
+
         }
     }
 

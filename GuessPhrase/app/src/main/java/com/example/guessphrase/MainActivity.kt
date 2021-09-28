@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textPhrase: TextView
     private lateinit var textLettr: TextView
 
-    private val answer = "this is the secret phrase"
+    private val answer = "to infinity and beyond"
     private val mapOfAnswer = mutableMapOf<Int, Char>()
     private var theAnswer = ""
     private var guessLettr = ""
